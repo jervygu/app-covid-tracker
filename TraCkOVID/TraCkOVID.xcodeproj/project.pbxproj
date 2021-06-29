@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,21 @@
 		04330D85268B025E00333AC9 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04330D84268B025E00333AC9 /* FilterViewController.swift */; };
 		04330D89268B036A00333AC9 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04330D88268B036A00333AC9 /* APICaller.swift */; };
 		04EB9F99268B18AF00AC676F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB9F98268B18AF00AC676F /* Extension.swift */; };
+		437E476B8C2489033B223FCE /* Pods_TraCkOVID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8133081ED52C20ECCB1E746 /* Pods_TraCkOVID.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04EB9FA1268B251100AC676F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04330D65268B009300333AC9 /* TraCkOVID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraCkOVID.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +44,9 @@
 		04330D84268B025E00333AC9 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		04330D88268B036A00333AC9 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		04EB9F98268B18AF00AC676F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		D7C5872801A3A5AB3ADF5D8F /* Pods-TraCkOVID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraCkOVID.release.xcconfig"; path = "Target Support Files/Pods-TraCkOVID/Pods-TraCkOVID.release.xcconfig"; sourceTree = "<group>"; };
+		D8133081ED52C20ECCB1E746 /* Pods_TraCkOVID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraCkOVID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB8B936B6326BC7427B8AE5 /* Pods-TraCkOVID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraCkOVID.debug.xcconfig"; path = "Target Support Files/Pods-TraCkOVID/Pods-TraCkOVID.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437E476B8C2489033B223FCE /* Pods_TraCkOVID.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +66,8 @@
 			children = (
 				04330D67268B009300333AC9 /* TraCkOVID */,
 				04330D66268B009300333AC9 /* Products */,
+				488D32F1C7B377CB51A6C865 /* Pods */,
+				B587D60F96BEB5178A0A1AE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +144,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		488D32F1C7B377CB51A6C865 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAB8B936B6326BC7427B8AE5 /* Pods-TraCkOVID.debug.xcconfig */,
+				D7C5872801A3A5AB3ADF5D8F /* Pods-TraCkOVID.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B587D60F96BEB5178A0A1AE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8133081ED52C20ECCB1E746 /* Pods_TraCkOVID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,15 +168,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04330D79268B009500333AC9 /* Build configuration list for PBXNativeTarget "TraCkOVID" */;
 			buildPhases = (
+				B8A8BAB06893ED6D0DAC5679 /* [CP] Check Pods Manifest.lock */,
 				04330D61268B009300333AC9 /* Sources */,
 				04330D62268B009300333AC9 /* Frameworks */,
 				04330D63268B009300333AC9 /* Resources */,
+				04EB9FA1268B251100AC676F /* Embed Frameworks */,
+				2A411577208533E03DA0FA19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TraCkOVID;
+			packageProductDependencies = (
+			);
 			productName = TraCkOVID;
 			productReference = 04330D65268B009300333AC9 /* TraCkOVID.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +209,8 @@
 				Base,
 			);
 			mainGroup = 04330D5C268B009300333AC9;
+			packageReferences = (
+			);
 			productRefGroup = 04330D66268B009300333AC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +232,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A411577208533E03DA0FA19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraCkOVID/Pods-TraCkOVID-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraCkOVID/Pods-TraCkOVID-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraCkOVID/Pods-TraCkOVID-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8A8BAB06893ED6D0DAC5679 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraCkOVID-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04330D61268B009300333AC9 /* Sources */ = {
@@ -343,6 +429,7 @@
 		};
 		04330D7A268B009500333AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB8B936B6326BC7427B8AE5 /* Pods-TraCkOVID.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -363,6 +450,7 @@
 		};
 		04330D7B268B009500333AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7C5872801A3A5AB3ADF5D8F /* Pods-TraCkOVID.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -27,7 +27,7 @@ class APICaller {
         let urlString: String
         switch scope {
         case .national:
-            urlString = "https://api.covidtracking.com/v2/ /daily.json"
+            urlString = "https://api.covidtracking.com/v2/us/daily.json"
         case .state(let state):
             urlString = "https://api.covidtracking.com/v2/states/\(state.state_code.lowercased())/daily.json"
         }

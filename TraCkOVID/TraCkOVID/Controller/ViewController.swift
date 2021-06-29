@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Charts
 
 class ViewController: UIViewController {
     
@@ -100,7 +101,40 @@ class ViewController: UIViewController {
     }
     
     private func createGraph() {
+        let headerView = UIView(
+            frame: CGRect(x: 0,
+                          y: 0,
+                          width: view.frame.size.width,
+                          height: view.frame.size.width/1.5))
         
+        headerView.clipsToBounds = true
+        
+        let set = dayData.prefix(30)
+        
+        var entries: [BarChartDataEntry] = []
+        
+        for index in 0..<set.count {
+            let data = set[index]
+            entries.append(.init(x: Double(index), y: Double(data.count)))
+        }
+        
+        let dataSet = BarChartDataSet(entries: entries)
+        
+        dataSet.colors = ChartColorTemplates.joyful()
+        
+        let data: BarChartData = BarChartData(dataSet: dataSet)
+        
+        let chart = BarChartView(frame: CGRect(x: 0,
+                                               y: 0,
+                                               width: view.frame.size.width,
+                                               height: view.frame.size.width/1.5))
+        
+        
+        chart.data = data
+        
+        headerView.addSubview(chart)
+        
+        tableView.tableHeaderView = headerView
     }
     
     private func createText(with data: DayData) -> String? {

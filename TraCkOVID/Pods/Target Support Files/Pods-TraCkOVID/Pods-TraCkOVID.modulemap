@@ -1,0 +1,6 @@
+framework module Pods_TraCkOVID {
+  umbrella header "Pods-TraCkOVID-umbrella.h"
+
+  export *
+  module * { export * }
+}
